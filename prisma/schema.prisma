@@ -28,5 +28,6 @@ model Product{
   categoryid String
   category Category @relation(fields: [categoryid],references: [id])
   discountPercent Int @default(0)
+  
 
 }
