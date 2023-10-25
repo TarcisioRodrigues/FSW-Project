@@ -31,7 +31,7 @@ export const ProductItem = ({ product }: ItemProductProps) => {
                 <p className="w-full text-sn items-center text-ellipsis whitespace-nowrap overflow-hidden">{product.name}</p>
                 <div className="flex items-center justify-center gap-2">
                     {product.discountPercentage > 0 ? (
-                        <><p className="font-semibold text-xs">R${product.totalPrice.toFixed(2)}</p>
+                        <><p className="font-semibold ">R${product.totalPrice.toFixed(2)}</p>
                             <p className="opacity-75 line-through">R${Number(product.basePrice).toFixed(2)}</p></>
                     ) : (
                         <p className="font-semibold text-xs">R${product.totalPrice.toFixed(2)}</p>
