@@ -31,10 +31,19 @@ export const ProductItem = ({ product }: ItemProductProps) => {
                 <p className="w-full text-sn items-center text-ellipsis whitespace-nowrap overflow-hidden">{product.name}</p>
                 <div className="flex items-center justify-center gap-2  whitespace-nowrap overflow-hidden">
                     {product.discountPercentage > 0 ? (
-                        <><p className="font-semibold ">R${product.totalPrice.toFixed(2)}</p>
-                            <p className="opacity-75 line-through text-ellipsis text-xs">R${Number(product.basePrice).toFixed(2)}</p></>
+                        <>
+                            <p className="truncate font-semibold">
+                                R$ {product.totalPrice.toFixed(2)}
+                            </p>
+
+                            <p className="truncate text-xs line-through opacity-75">
+                                R$ {Number(product.basePrice).toFixed(2)}
+                            </p>
+                        </>
                     ) : (
-                        <p className="font-semibold text-xs">R${product.totalPrice.toFixed(2)}</p>
+                        <p className="truncate text-sm font-semibold">
+                            R$ {product.basePrice.toFixed(2)}
+                        </p>
                     )}
 
                 </div>
