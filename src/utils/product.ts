@@ -16,6 +16,6 @@ export const computedProductsTotalPrice = (product: Product): ProductWithTotalPr
 
     return {
         ...product,
-        totalPrice
+        totalPrice: Number(product.basePrice) - totalPrice
     }
 }
