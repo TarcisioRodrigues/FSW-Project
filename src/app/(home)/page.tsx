@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Categories } from "./components/categories"
 import { prismaClient } from "@/src/lib/prisma"
-import { ProductList } from "./components/product-list"
+import { ProductList } from "../../components/ui/product-list"
 import { SectionTitle } from "@/src/components/ui/section"
 import { PromoBanner } from "./components/promobanner"
 
