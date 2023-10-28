@@ -5,6 +5,7 @@ import { Card } from "./card";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "./sheet";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import { Carts } from "./carts";
 
 export const Header = () => {
     const handleLogin = async () => {
@@ -30,9 +31,19 @@ export const Header = () => {
                 </SheetContent>
             </Sheet>
             <h1 className="text-lg font-semibold"><span className="text-primary">FSW </span>Store</h1>
-            <Button className="icon" variant="outline">
-                <ShoppingCartIcon />
-            </Button>
+            <Sheet>
+                <SheetTrigger asChild>
+                    <Button className="icon" variant="outline">
+                        <ShoppingCartIcon />
+                    </Button>
+                </SheetTrigger>
+                <SheetContent side="right">
+                    <SheetHeader className="text-left text-lg">Menu</SheetHeader>
+                    <div className="mt-2 flex flex-col gap-4">
+                        <Carts />
+                    </div>
+                </SheetContent>
+            </Sheet>
         </Card>);
 }
 
