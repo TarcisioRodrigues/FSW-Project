@@ -12,7 +12,7 @@ interface ProductInfoProps {
 }
 export const ProductInfo = ({ product }: ProductInfoProps) => {
     const { addProductToCart } = useContext(CartContext)
-    const [quanity, setQuanity] = useState(1)
+    const [quantity, setQuanity] = useState(1)
     const handlerIncrement = () => {
         setQuanity((prevState) => prevState + 1)
     }
@@ -20,7 +20,7 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
         setQuanity((prevState) => (prevState === 1 ? prevState : prevState - 1))
     }
     const handleAddToCard = () => {
-        addProductToCart({ ...product, quanity })
+        addProductToCart({ ...product, quantity })
     }
     return (
         <div className="flex flex-col px-5">
@@ -44,7 +44,7 @@ export const ProductInfo = ({ product }: ProductInfoProps) => {
                 <Button size="icon" variant="outline" onClick={handlerDecrement}>
                     <ArrowLeftIcon size={16} />
                 </Button>
-                <span className="text-lg">{quanity}</span>
+                <span className="text-lg">{quantity}</span>
                 <Button onClick={handlerIncrement}><ArrowRightIcon size={16} /></Button>
             </div>
             <div className="flex flex-col gap-3 mt-8">

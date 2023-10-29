@@ -8,7 +8,7 @@ interface CartItemProps {
     product: CartProduct;
 }
 
-export const CartItem = ({ product }: CartItemProps) => {
+const CartItem = ({ product }: CartItemProps) => {
     const {
         decreaseProductQuantity,
         increaseProductQuantity,
@@ -21,6 +21,7 @@ export const CartItem = ({ product }: CartItemProps) => {
 
     const handleIncreaseProductQuantityClick = () => {
         increaseProductQuantity(product.id);
+        console.log(product.quantity)
     };
 
     const handleRemoveProductClick = () => {
@@ -30,6 +31,7 @@ export const CartItem = ({ product }: CartItemProps) => {
     return (
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
+
 
                 <div className="flex h-[77px] w-[77px] items-center justify-center rounded-lg bg-accent lg:h-[120px] lg:w-[120px]">
                     <Image
@@ -66,7 +68,7 @@ export const CartItem = ({ product }: CartItemProps) => {
                             <ArrowLeftIcon className="h-4 w-4 lg:h-5 lg:w-5" />
                         </Button>
 
-                        <span className="text-xs lg:text-sm">{product.quantity}</span>
+                        <span className="text-xs lg:text-sm">{Number(product.quantity)}</span>
 
                         <Button
                             size="icon"
@@ -92,3 +94,4 @@ export const CartItem = ({ product }: CartItemProps) => {
     );
 };
 
+export default CartItem;
