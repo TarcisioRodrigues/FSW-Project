@@ -32,7 +32,7 @@ const ProdcutDetailsPage = async ({ params: { slug } }: ProdcutDetailsPageProps)
         <div className="flex flex-col gap-8 pb-8">
             <ProductImages key={product.id} imageUrls={product.imageUrls} name={product.name} />
             <ProductInfo product={computedProductsTotalPrice(product)} key={product.id} />
-            <SectionTitle>Produtos Recomendados</SectionTitle>
+            <SectionTitle className="pl-5">Produtos Recomendados</SectionTitle>
             <ProductList products={product.category.products} />
 
         </div>

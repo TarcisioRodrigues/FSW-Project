@@ -34,17 +34,17 @@ const Home = async () => {
       <Categories />
     </div>
     <div >
-      <SectionTitle>Ofertas</SectionTitle>
+      <SectionTitle className="pl-5">Ofertas</SectionTitle>
       <ProductList products={deals} />
     </div>
     <PromoBanner src="/bannermouses.png" alt="até 50% de desconto em mouses" />
     <div >
-      <SectionTitle>Teclados</SectionTitle>
+      <SectionTitle className="pl-5">Teclados</SectionTitle>
       <ProductList products={keyboards} />
     </div>
     <PromoBanner src="/bannerfones.png" alt="até 50% de desconto em mouses" />
     <div >
-      <SectionTitle>Mouses</SectionTitle>
+      <SectionTitle className="pl-5">Mouses</SectionTitle>
       <ProductList products={mouses} />
     </div>
   </div>
