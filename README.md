@@ -42,16 +42,5 @@ Fique à vontade para explorar e compartilhar suas opiniões sobre o design do p
 
 Este projeto está totalmente aberto a contribuições. Se você deseja colaborar, fique à vontade para criar pull requests, corrigir bugs, adicionar novos recursos ou aprimorar a documentação. Sua contribuição é valiosa e ajuda a melhorar ainda mais este projeto!
 
-### Como Contribuir
 
-1. Faça um fork deste repositório.
 
-2. Crie uma branch para sua contribuição:
-
-```bash
-    git checkout -b minha-contribuicao
-```
-
-3. Faça suas alterações e adicione commits descritivos (seguindo o Conventional Commits, preferencialmente).
-
-4. Crie um pull request para a branch `main` deste repositório.
